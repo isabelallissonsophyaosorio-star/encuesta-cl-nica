@@ -1,0 +1,179 @@
+/* --- BASE --- */
+body {
+  font-family: "Century Gothic", "Times New Roman", serif;
+  background-color: white;
+  margin: 0;
+  color: #222;
+}
+
+/* --- Franja superior --- */
+.franja-verde {
+  background-color: #91e48f;
+  color: #004d2b;
+  text-align: center;
+  padding: 8px 0; /* más delgada */
+  border-bottom: 2px solid #058c42;
+  transition: 0.3s;
+}
+
+.franja-verde h1 {
+  font-family: "Castellar", serif;
+  font-size: 26px;
+  margin: 0;
+}
+
+.franja-verde h2,
+.franja-verde h3 {
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+/* --- Contenedor principal --- */
+.container {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* --- Bloques --- */
+.bloque-datos {
+  transition: all 0.5s ease;
+}
+
+.bloque-datos.minimizado {
+  transform: translateX(-250px);
+  opacity: 0.7;
+  width: 250px;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 150px;
+}
+
+label {
+  font-weight: 600;
+  color: #004d2b;
+}
+
+input, select, textarea {
+  border: 2px solid #058c42;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  color: #058c42;
+  font-weight: bold;
+}
+
+.oculto {
+  display: none;
+}
+
+/* --- Título de encuesta --- */
+.titulo-encuesta {
+  text-align: center;
+  color: #058c42;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* --- Preguntas --- */
+.categoria {
+  margin-top: 25px;
+  border-top: 1px solid #c7c7c7;
+  padding-top: 15px;
+}
+
+.categoria h6 {
+  color: #058c42;
+  font-size: 18px;
+}
+
+.pregunta label {
+  font-size: 17px; /* un poco más grande */
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* --- Opciones tipo botón --- */
+.opciones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.opciones button {
+  flex: 1;
+  border: 2px solid #058c42;
+  background-color: white;
+  color: #058c42;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.opciones button:hover,
+.opciones button.selected {
+  background-color: #058c42;
+  color: white;
+}
+
+
+/* --- Comentarios y botones --- */
+.comentarios textarea {
+  resize: none;
+}
+
+.boton-centro {
+  text-align: center;
+}
+
+button, .btn-whatsapp {
+  background-color: #058c42;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .btn-whatsapp:hover {
+  background-color: #046c34;
+}
+
+/* --- Mensaje de agradecimiento --- */
+.gracias {
+  text-align: center;
+}
+
+.redes a {
+  color: #058c42;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* --- Privacidad --- */
+.privacidad {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 15px;
+  color: #444;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta de Satisfacción - Isabel Franco by SAQUINA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <div class="franja-verde">
+      <h1>ISABEL FRANCO</h1>
+      <h2>Estudio Estético Profesional</h2>
+      <h3>by SAQUINA</h3>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- DATOS DEL CLIENTE -->
+    <section id="bloque-datos" class="bloque-datos">
+      <h3>Datos del Cliente</h3>
+      <form id="formEncuesta">
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono">
+
+        <label>Correo electrónico:</label>
+        <input type="email" name="correo">
+      </form>
+    </section>
+
+    <!-- SELECCIÓN DEL SERVICIO -->
+    <section class="bloque-servicio">
+      <label for="servicio">Selecciona el servicio que recibiste:</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">-- Selecciona --</option>
+        <option value="Masajes">Masaje Relajante</option>
+        <option value="Limpieza facial">Limpieza Facial</option>
+        <option value="Quiropraxia">Quiropraxia</option>
+        <option value="Uñas">Limpieza o extracción de uñas</option>
+        <option value="otros">Otros</option>
+      </select>
+    </section>
+
+    <!-- ENCUESTA -->
+    <section id="bloque-encuesta" class="oculto">
+      <h2 class="titulo-encuesta">Encuesta de Satisfacción</h2>
+      <h4 id="titulo-servicio"></h4>
+
+      <!-- INFRAESTRUCTURA -->
+      <div class="categoria">
+        <h6>Infraestructura</h6>
+        <div class="pregunta">
+          <label>¿El ambiente tenía un olor agradable y adecuado?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿Las instalaciones estaban limpias y ordenadas?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿La iluminación y temperatura eran adecuadas?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿Los espacios eran cómodos y accesibles?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿El mobiliario se encontraba en buen estado?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICIO AL CLIENTE -->
+      <div class="categoria">
+        <h6>Servicio al Cliente</h6>
+        <div class="pregunta">
+          <label>¿El personal fue amable y atento?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿El tiempo de espera fue adecuado?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿El personal demostró conocimientos del servicio?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿Te sentiste escuchado y atendido en tus necesidades?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+        <div class="pregunta">
+          <label>¿Recomendarías el servicio a otras personas?</label>
+          <div class="opciones">
+            <button>Malo</button><button>Debe mejorar</button><button>Bueno</button><button>Excelente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PREGUNTAS POR SERVICIO -->
+      <div id="extra-preguntas"></div>
+
+      <!-- COMENTARIOS -->
+      <div class="comentarios">
+        <label>Comentarios adicionales:</label>
+        <textarea rows="4" placeholder="Escribe aquí tus observaciones..."></textarea>
+      </div>
+
+      <div class="boton-centro">
+        <button type="button" id="btnEnviar">Enviar Encuesta</button>
+        <button type="button" id="btnModificar" class="btn-modificar">Modificar datos personales</button>
+      </div>
+    </section>
+
+    <!-- MENSAJE DE AGRADECIMIENTO -->
+    <section id="bloque-gracias" class="oculto gracias">
+      <h2>¡Gracias por tu tiempo!</h2>
+      <p>Tus opiniones son muy valiosas para mejorar nuestros servicios.</p>
+      <p>📞 Teléfono: <a href="tel:+50255555555">+502 5555 5555</a></p>
+      <a class="btn-whatsapp" href="https://wa.me/50255555555?text=Hola!%20Quiero%20agendar%20una%20cita%20por%20favor" target="_blank">Agendar cita por WhatsApp</a>
+      <div class="redes">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </div>
+    </section>
+
+    <footer class="privacidad">
+      <p>La información proporcionada será tratada de manera confidencial, respetando su privacidad y seguridad.</p>
+    </footer>
+  </main>
+</body>
+</html>
